@@ -1,0 +1,4 @@
+/* Global app styles - minimal, theme handled by index.css */
+html {
+  scroll-behavior: smooth;
+}
