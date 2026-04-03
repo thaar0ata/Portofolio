@@ -4,11 +4,11 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { label: "Home", href: "/#hero" },
-  { label: "Skills", href: "/#skills" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Certifications", href: "/#certifications" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Home", href: "#hero" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Certifications", href: "#certifications" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -48,28 +48,28 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
-        <Link
-          to="/#hero"
+        <a
+          href="#hero"
           className="font-display text-xl font-bold gold-text-gradient sm:text-2xl min-h-[44px] min-w-[44px] flex items-center -ml-2 pl-2"
         >
           Portfolio
-        </Link>
+        </a>
 
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8">
           {navItems.map((item) => {
-            const sectionId = item.href.replace("/#", "");
+            const sectionId = item.href.replace("#", "");
             const isActive = onHome && activeSection === sectionId;
             return (
               <li key={item.href}>
-                <Link
-                  to={item.href}
+                <a
+                  href={item.href}
                   className={`font-body text-sm tracking-widest uppercase transition-colors duration-300 ${
                     isActive ? "text-primary" : "text-muted-foreground hover:text-primary"
                   }`}
                 >
                   {item.label}
-                </Link>
+                </a>
               </li>
             );
           })}
@@ -99,13 +99,13 @@ const Navbar = () => {
             <ul className="flex flex-col items-stretch px-4 py-4 gap-1">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <Link
-                    to={item.href}
+                  <a
+                    href={item.href}
                     onClick={() => setIsOpen(false)}
                     className="font-body flex min-h-[48px] items-center justify-center rounded-lg text-sm tracking-widest uppercase text-muted-foreground active:bg-primary/10 hover:text-primary transition-colors"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
