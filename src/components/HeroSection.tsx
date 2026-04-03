@@ -46,16 +46,21 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
+          <div className="mx-auto mb-4 max-w-xl">
+            <p className="font-body text-lg md:text-2xl font-semibold text-primary mb-2 tracking-wide animate-fade-in">
+              Crafting immersive spaces, one pixel at a time.
+            </p>
+          </div>
           <p className="font-body mx-auto mb-8 flex max-w-md flex-col items-center gap-1.5 text-base text-muted-foreground sm:mb-10 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-3 sm:gap-y-0 sm:text-lg md:text-xl md:tracking-widest">
-            <span className="text-primary">3D Visualizer</span>
+            <span className="text-primary font-bold">3D Visualizer</span>
             <span className="hidden text-border sm:inline" aria-hidden>
               •
             </span>
-            <span className="text-primary">Architect</span>
+            <span className="text-primary font-bold">Architect</span>
             <span className="hidden text-border sm:inline" aria-hidden>
               •
             </span>
-            <span className="text-primary">Designer</span>
+            <span className="text-primary font-bold">Designer</span>
           </p>
         </motion.div>
 
