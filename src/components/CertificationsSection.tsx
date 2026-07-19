@@ -49,15 +49,16 @@ const certifications = [
 const CertificationsSection = () => {
   return (
     <section id="certifications" className="relative py-16 sm:py-20 md:py-24">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-10 text-center sm:mb-14 md:mb-16"
+          transition={{ duration: 0.55 }}
+          className="mb-10 text-center sm:mb-14"
         >
-          <p className="font-body text-sm tracking-[0.3em] uppercase text-muted-foreground mb-3">
+          <p className="font-body mb-3 text-sm uppercase tracking-[0.3em] text-muted-foreground">
             Credentials
           </p>
           <h2 className="font-display text-3xl font-bold gold-text-gradient sm:text-4xl md:text-5xl">
@@ -66,26 +67,24 @@ const CertificationsSection = () => {
         </motion.div>
 
         <div className="relative mx-auto max-w-2xl space-y-0">
-          {/* Timeline line */}
-          <div className="absolute bottom-0 left-[1.125rem] top-0 w-px bg-gradient-to-b from-primary/60 via-primary/20 to-transparent sm:left-8 md:left-8" />
+          <div className="absolute bottom-0 left-[1.125rem] top-0 w-px bg-gradient-to-b from-primary/60 via-primary/20 to-transparent sm:left-8" />
 
           {certifications.map((cert, i) => (
             <motion.div
               key={cert.name}
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.12, duration: 0.5 }}
-              className="group relative py-4 pl-12 sm:py-6 sm:pl-16 md:pl-20"
+              transition={{ delay: Math.min(i * 0.06, 0.3), duration: 0.4 }}
+              className="group relative py-3.5 pl-12 sm:py-5 sm:pl-16 md:pl-20"
             >
-              {/* Timeline dot */}
-              <div className="absolute left-2 top-7 h-4 w-4 rounded-full border-[3px] border-background gold-gradient transition-all group-hover:animate-glow sm:left-3.5 sm:top-8 sm:h-5 sm:w-5 sm:border-4 md:left-5.5" />
+              <div className="absolute left-2 top-7 h-4 w-4 rounded-full border-[3px] border-background gold-gradient transition-all group-hover:animate-glow sm:left-3.5 sm:top-8 sm:h-5 sm:w-5 sm:border-4" />
 
-              <div className="rounded-xl border border-border bg-card p-4 transition-all duration-300 hover:border-primary/40 sm:rounded-lg sm:p-6">
+              <div className="rounded-2xl border border-border/80 bg-card/70 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md hover:shadow-primary/5 sm:p-6">
                 <div className="flex gap-3 sm:gap-4">
-                  <Award className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary sm:mt-1 sm:h-[22px] sm:w-[22px]" strokeWidth={1.75} />
+                  <Award className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary sm:mt-1" strokeWidth={1.75} />
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-display text-base font-semibold leading-snug text-primary sm:text-lg break-words">
+                    <h3 className="font-display break-words text-base font-semibold leading-snug text-primary sm:text-lg">
                       {cert.name}
                     </h3>
                     <p className="mt-1 font-body text-sm text-muted-foreground">
@@ -95,7 +94,7 @@ const CertificationsSection = () => {
                       href={cert.verifyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 inline-flex min-h-[44px] items-center gap-1.5 rounded-lg py-2 font-body text-sm text-primary underline-offset-4 hover:underline active:text-primary/90"
+                      className="mt-2 inline-flex min-h-[44px] items-center gap-1.5 rounded-lg py-2 font-body text-sm text-primary underline-offset-4 hover:underline"
                     >
                       Verify on Coursera
                       <ExternalLink size={14} aria-hidden />

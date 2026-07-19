@@ -4,9 +4,15 @@ import p1_3 from "@/assets/portfolio/project-1/3.jpg.jpeg?url";
 import p2_5 from "@/assets/portfolio/project-2/5.jpg.jpeg?url";
 import p2_7 from "@/assets/portfolio/project-2/7.png?url";
 import p2_8 from "@/assets/portfolio/project-2/8.jpg.jpeg?url";
-import p3_6 from "@/assets/portfolio/project-3/6.png?url";
-import p3_9 from "@/assets/portfolio/project-3/9.jpg.jpeg?url";
-import p3_detail from "@/assets/portfolio/project-3/file_00000000875072438c7f83f42f9447aa.png?url";
+import p4_1 from "@/assets/portfolio/project-4/bedroom-1.jpg?url";
+import p4_2 from "@/assets/portfolio/project-4/bedroom-2.jpg?url";
+import p5_1 from "@/assets/portfolio/project-5/office-1.jpg?url";
+import p5_2 from "@/assets/portfolio/project-5/office-2.jpg?url";
+import p6_1 from "@/assets/portfolio/project-6/kitchen-1.jpg?url";
+import p6_2 from "@/assets/portfolio/project-6/kitchen-2.jpg?url";
+import p6_3 from "@/assets/portfolio/project-6/kitchen-3.jpg?url";
+import p6_4 from "@/assets/portfolio/project-6/kitchen-4.jpg?url";
+import p6_5 from "@/assets/portfolio/project-6/kitchen-5.jpg?url";
 
 export type Project = {
   slug: string;
@@ -36,27 +42,53 @@ The set is meant to read as high-end residential presentation imagery—material
     slug: "warm-minimalist-bedroom",
     title: "Warm Minimalist Bedroom",
     shortDescription:
-      "Contemporary bedroom visualization with vertical wood wall treatments, a sculptural wood chandelier with greenery, and floor-to-ceiling wardrobe with integrated lighting.",
-    longDescription: `Two complementary angles of the same suite: a platform bed on a plush rug, layered neutral bedding, and a feature wall in light wood planks with a section of darker vertical slats. A large decorative skeleton-key clock anchors the wood wall; layered champagne and chocolate drapery dress the tall window.
+      "Contemporary bedroom suite with wood wall treatments, a media lounge, sculptural pendant lighting, and wardrobe with integrated storage lighting.",
+    longDescription: `Multiple angles of the same suite: a platform bed on a plush rug, layered neutral bedding, and a feature wall in light wood planks with darker vertical slats. A large decorative skeleton-key clock anchors the wood wall; layered champagne and chocolate drapery dress the tall window.
 
-Storage is handled by a tall minimalist wardrobe—white panels with a wood band and lit niches—while a second view opens up a vanity nook with mirror lighting, floating shelves, and a geometric wood pendant where vines trail through the frame for a soft biophilic note.
+A lounge / media view opens to dark wood paneling, a marble TV wall with a floating console, and a built-in desk nook. Storage is handled by a tall minimalist wardrobe—white panels with a wood band and lit niches—while another view opens a vanity nook with mirror lighting, floating shelves, and a geometric wood pendant with trailing greenery.
 
 The renders emphasize warm wood grain, soft spot and LED accents, and a calm, hotel-like mood suitable for a master bedroom or high-end apartment marketing.`,
     tools: ["3ds Max"],
-    images: [p2_5, p2_7, p2_8],
+    images: [p2_7, p2_8, p2_5],
   },
   {
-    slug: "contemporary-minimalist-kitchen",
-    title: "Contemporary Minimalist Kitchen",
+    slug: "starlit-bedroom-suite",
+    title: "Starlit Bedroom Suite",
     shortDescription:
-      "Sleek kitchen studies: high-gloss white cabinetry, dark stone worktops, a geometric line backsplash, wood breakfast bar, and sculptural pendants over the dining zone.",
-    longDescription: `All three frames explore the same design language—minimalist kitchens with crisp white cabinets, metallic handles, and a white tile backsplash patterned with fine black geometry. Countertops shift between dark veined stone and rich wood on the bar; under-cabinet LEDs and integrated strips under the bar edge keep work surfaces readable.
+      "Atmospheric bedroom visualization with a starry ceiling, warm peach tones, a platform bed, and soft cove lighting for a dreamlike luxury feel.",
+    longDescription: `This suite is built around atmosphere: a ceiling field of tiny lights, a soft organic central fixture, and warm cove LEDs that trace platforms and edges. The palette stays in peach, beige, and muted rose, with darker accents in seating and textiles.
 
-Appliances and hardware stay quiet: black range hood, built-in cooktop, and in some views a dark-framed window behind the sink. Statement lighting includes branch-style or multi-arm pendants; ceilings combine recessed squares, a bright central panel, and subtle ceiling detail so the space feels bright but controlled.
+One view opens to floor-to-ceiling drapery and rounded lounge chairs; another focuses on the bed, circular textured wall art, and a long handle-less wardrobe wall. Soft floor glow and a sculptural ottoman keep the room feeling intentional from every camera.
 
-Together they document a single concept from different camera positions—useful for explaining layout, finishes, and lighting intent to clients or collaborators.`,
+The images are presentation stills for a high-concept residential bedroom—mood, material, and lighting hierarchy first.`,
     tools: ["3ds Max"],
-    images: [p3_6, p3_9, p3_detail],
+    images: [p4_1, p4_2],
+  },
+  {
+    slug: "executive-home-office",
+    title: "Executive Home Office",
+    shortDescription:
+      "Minimalist office visualization with a dark desk, cream cabinetry, sculptural pendants, and bold red accents against a bright urban backdrop.",
+    longDescription: `A clean executive workspace centered on a large dark desk and black ergonomic chair, set against floor-to-ceiling cream cabinetry with recessed wood shelving. Horizontal blinds and a city-facing window keep the room bright while the furniture stays grounded.
+
+Statement lighting—elongated crystalline pendants and a desk lamp—pairs with sculptural accents: a tall red figure with a glowing orb, a glossy red sphere, and a textured petal-like stool. Soft neutrals carry most of the palette so the red details read clearly.
+
+The set communicates a refined home office or study for client presentations: calm layout, strong material contrast, and a few memorable design moments.`,
+    tools: ["3ds Max"],
+    images: [p5_1, p5_2],
+  },
+  {
+    slug: "marble-wood-kitchen",
+    title: "Marble & Wood Kitchen",
+    shortDescription:
+      "Luxury kitchen set with veined marble island and backsplash, dark wood cabinetry, a black cylindrical hood, and detailed appliance and sink close-ups.",
+    longDescription: `Wide shots establish a moody luxury kitchen: a thick marble island with waterfall edges, dark fluted and wood-grain cabinetry, a matte black cylindrical range hood, and warm recessed lighting. Matching marble runs across the back counter and backsplash with soft under-cabinet glow.
+
+Detail frames zoom into the sink zone—dramatic marble veining, a tall black faucet, and wood upper slats—and into stacked built-in ovens set in vertical-grain wood. Lit glass cabinetry and dark wood flooring keep the material story consistent across the set.
+
+Together the images sell a single kitchen concept from overview to finish and appliance detail—ideal for design review and marketing stills.`,
+    tools: ["3ds Max"],
+    images: [p6_1, p6_2, p6_3, p6_4, p6_5],
   },
 ];
 

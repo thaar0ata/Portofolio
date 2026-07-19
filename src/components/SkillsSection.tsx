@@ -40,52 +40,53 @@ const focusAreas = [
 const SkillsSection = () => {
   return (
     <section id="skills" className="relative py-16 sm:py-20 md:py-24">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.55 }}
           className="mx-auto mb-10 max-w-2xl text-center sm:mb-12"
         >
-          <p className="font-body text-sm tracking-[0.3em] uppercase text-muted-foreground mb-3">
+          <p className="font-body mb-3 text-sm uppercase tracking-[0.3em] text-muted-foreground">
             Expertise
           </p>
           <h2 className="font-display mb-4 text-3xl font-bold gold-text-gradient sm:text-4xl md:text-5xl">
             Skills & Tools
           </h2>
           <p className="font-body text-sm leading-relaxed text-muted-foreground md:text-base">
-            Work spans high-end interior renders and accurate technical drawings—built to communicate design intent clearly to clients and collaborators.
+            High-end interior renders and accurate technical drawings—built to communicate design intent clearly.
           </p>
         </motion.div>
 
-        <div className="mx-auto mb-12 grid max-w-5xl gap-6 md:mb-14 md:grid-cols-2 md:gap-8">
+        <div className="mx-auto mb-12 grid max-w-5xl gap-5 md:mb-14 md:grid-cols-2 md:gap-7">
           {mainSkills.map((skill, i) => (
             <motion.div
               key={skill.name}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.12, duration: 0.5 }}
-              className="group relative rounded-xl border border-border bg-card p-5 text-left transition-all duration-500 hover:border-primary/50 sm:rounded-lg sm:p-8 shimmer"
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="group relative rounded-2xl border border-border/80 bg-card/70 p-5 text-left shadow-sm shadow-black/10 transition-all duration-500 hover:-translate-y-0.5 hover:border-primary/45 hover:shadow-lg hover:shadow-primary/10 sm:p-8 shimmer"
             >
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg gold-gradient transition-all group-hover:animate-glow sm:h-14 sm:w-14">
-                <skill.icon className="text-primary-foreground" size={28} />
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl gold-gradient shadow-md shadow-primary/15 transition-all group-hover:animate-glow sm:h-14 sm:w-14">
+                <skill.icon className="text-primary-foreground" size={26} />
               </div>
-              <h3 className="font-display text-xl font-semibold text-primary sm:text-2xl mb-1">
+              <h3 className="font-display mb-1 text-xl font-semibold text-primary sm:text-2xl">
                 {skill.name}
               </h3>
-              <p className="font-body mb-4 text-xs uppercase tracking-[0.2em] text-primary/80">
+              <p className="font-body mb-4 text-xs uppercase tracking-[0.18em] text-primary/75">
                 {skill.summary}
               </p>
               <p className="font-body mb-6 text-sm leading-relaxed text-muted-foreground">
                 {skill.description}
               </p>
-              <ul className="space-y-2.5 border-t border-border pt-6">
+              <ul className="space-y-2.5 border-t border-border/80 pt-5">
                 {skill.highlights.map((line) => (
                   <li
                     key={line}
-                    className="font-body text-sm text-card-foreground/90 flex gap-3 leading-snug"
+                    className="flex gap-3 font-body text-sm leading-snug text-card-foreground/90"
                   >
                     <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full gold-gradient" aria-hidden />
                     {line}
@@ -97,20 +98,20 @@ const SkillsSection = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="max-w-3xl mx-auto"
+          transition={{ delay: 0.15, duration: 0.45 }}
+          className="mx-auto max-w-3xl"
         >
-          <p className="font-body text-center text-xs tracking-[0.25em] uppercase text-muted-foreground mb-5">
+          <p className="mb-5 text-center font-body text-xs uppercase tracking-[0.25em] text-muted-foreground">
             Focus areas
           </p>
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-2.5">
             {focusAreas.map((item) => (
               <span
                 key={item}
-                className="font-body rounded-full border border-border px-4 py-2 text-xs text-muted-foreground transition-colors duration-300 hover:border-primary/50 hover:text-primary sm:px-5 sm:text-sm"
+                className="font-body rounded-full border border-border/80 bg-card/40 px-4 py-2 text-xs text-muted-foreground transition-colors duration-300 hover:border-primary/45 hover:text-primary sm:px-5 sm:text-sm"
               >
                 {item}
               </span>
