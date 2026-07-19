@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const plugins = [react(), mode === "development" && null].filter(Boolean);
 
   return {
-    base: "/Portofolio/",
+    base: "/portfolio/",
     server: {
       host: "::",
       port: 8080,
